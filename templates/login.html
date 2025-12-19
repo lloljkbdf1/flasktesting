@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}: Log In</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <nav id="navbar">
+      <li>
+        <label id="home" style="left: 17%; position: absolute;">Welcome to {{ title }}!</label>
+        <a href="/"id="home">Home</a>
+        <a href="/blog" id="home">Blog</a>
+        <a href="login"id="loginbutton">Login</a>
+        <a href="signup"id="signupbutton">Sign Up</a>
+      </li>
+    </nav>
+    <br>
+      <form action="{{ url_for('login_post') }}" method="post" id="lol">
+        <div id="div">
+        <h1 name="login" id="login">Login</h1>
+        <input type="text" name="username" id="username" placeholder="Username" required>
+        <input type="password" name="password" id="password" placeholder="Password" required>
+        <button type="submit" name="submit" id="submit">Log In</button>
+        {% if failed %}
+        <label id="failed">Failed login.</label>
+        {% endif %}
+        </div>
+    </form>
+</body>
+</html>

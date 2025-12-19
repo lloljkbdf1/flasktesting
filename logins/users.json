@@ -1,0 +1,17 @@
+{
+  "admin": {
+    "hash": "$argon2id$v=19$m=65536,t=3,p=4$tGYrfO74KzVbST6CzRaKNA$583Pq03tdRpSIV+5caR0/KdiZW2JkLKADViEWr7enc4"
+  },
+  "adm": {
+    "hash": "$argon2id$v=19$m=65536,t=3,p=4$t6NlSF0DL4SMyTy+sHT2hw$O83R+J1yoUxBzJXHfBlyogKHwO7gzsPHi+7X+H/U4Fo"
+  },
+  "wow": {
+    "hash": "$argon2id$v=19$m=65536,t=3,p=4$uMnmea5y4Dzx26lTM1lWZQ$vTmmmaItAe8oisLgTZv3nMxJZsYn5bCvlViocclD/pk"
+  },
+  "lol2": {
+    "hash": "$argon2id$v=19$m=65536,t=3,p=4$Lw49kzsqWl8VRR2L8AvI2g$20KwqUpSerJ+qD9INQyxaXCDON59HSB3vmFU4oe4bM0"
+  },
+  "122": {
+    "hash": "$argon2id$v=19$m=65536,t=3,p=4$R5I35uql5BUjiZDPC2qscg$6F71f1Qi12n04W416inDb2vQLOaxf5JINjWYOF2vfqo"
+  }
+}

@@ -1,0 +1,155 @@
+body{
+    overflow-x: hidden;
+    background-image:linear-gradient(to top, #568d0d, #84c42f,#568d0d);
+    background-repeat: no-repeat;
+    padding-top: 2%;
+    background-attachment: fixed;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+#username{
+    margin: 0;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    background-image:linear-gradient(to top, #5b9311, #87d81c);
+    color: #3d630b;
+    transform: translate(-50%, -50%);
+    border-color: #3d630b;
+}
+#username::placeholder{
+    margin: 0;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #294208;
+    background-image:linear-gradient(to top, #5b9311, #87d81c);
+    border-color: #3d630b;
+}
+#password{
+    margin: 0;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #3d630b;
+    background-image:linear-gradient(to top, #5b9311, #87d81c);
+    border-color: #3d630b;
+}
+#password::placeholder{
+    margin: 0;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #294208;
+    background-image:linear-gradient(to top, #5b9311, #87d81c);
+    border-color: #3d630b;
+}
+#submit{
+    margin: 0;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 2.5em;
+    width:12em;
+    background-image: linear-gradient(to top, rgb(58, 93, 13), rgb(78, 116, 28));
+    border: 3px solid #304e09;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+}
+#login{
+    margin: 0;
+    position: absolute;
+    top: 37%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to top, rgb(73, 117, 15), rgb(107, 158, 40));
+}
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+#navbar{
+    scale: 1.5;
+    width: 100%;
+    overflow: hidden;
+    list-style-type: none;
+    color: #98b2ff;
+    height: max-content;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    right: 0.105em;
+    background-image:linear-gradient(to top, #568d0d, #568d0d,#568d0d);
+    display: grid;
+    justify-content: center;
+}
+#home{
+    color: #3d630b;
+    text-decoration: none;
+}
+#loginbutton{
+    color: #3d630b;
+    text-decoration: none;
+}
+#signupbutton{
+    color: #3d630b;
+    text-decoration: none;
+}
+#div{
+    border-width: 3em;
+    border-style: solid;
+    width: 15em;
+    height: 20em;
+    border-top-width:17em;
+    top:30%;
+    position: relative;
+    border: 4px solid transparent;
+    background: linear-gradient(#568d0d, #84c42f,#568d0d) padding-box, linear-gradient(to right, #568d0d, #84c42f,#568d0d) border-box;
+}
+#post{
+    border-width: 3em;
+    border-style: solid;
+    width: auto;
+    height: auto;
+    word-break: break-all;
+    border-top-width:17em;
+    position: relative;
+    border: 4px solid transparent;
+    background: linear-gradient(#568d0d, #84c42f,#568d0d) padding-box, linear-gradient(to right, #568d0d, #84c42f,#568d0d) border-box;
+}
+#failed{
+    position: absolute;
+    top: 90%;
+    left:32%;
+    background: linear-gradient(#8d0d0d, #c42f2f,#8d0d0d) padding-box, linear-gradient(to right, #8d0d0d, #c42f2f,#8d0d0d) border-box;
+}
+#blog{
+    border-width: 3em;
+    border-style: solid;
+    width: 50em;
+    height: 50em;
+    border-top-width:17em;
+    top:10%;
+    position:absolute;
+    border: 4px solid transparent;
+    background: linear-gradient(#568d0d, #84c42f,#568d0d) padding-box, linear-gradient(to right, #568d0d, #84c42f,#568d0d) border-box;
+}
+#forum{
+    color: #3d630b;
+    text-decoration: none;
+    font-weight: bolder;
+}
+#lol{
+    overflow: visible;
+    scale: 1.5;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+
+  <body>
+    <nav id="navbar">
+      <li>
+        <label id="home" style="left: 17%; position: absolute;">Welcome to {{ title }}!</label>
+        <a href="/" id="home" >Home</a>
+        <a href="/blog" id="home">Blog</a>
+        {%if login %}
+        <a href="signout"id="home" >Sign Out</a>
+        {%else%}
+        <a href="login"id="loginbutton" >Login</a>
+        <a href="signup"id="signupbutton" >Sign Up</a>
+        {%endif%}
+      </li>
+    </nav>
+    {% if login %}
+     <form id="lol">
+    <div id="div" style="width: 30em;height: 30em;top: 20%;justify-content: center;display: grid;">
+        <h1>Welcome {{ username }}!</h1>
+    </div>
+    </form>
+    {% endif %}
+  </body>
+</html>
