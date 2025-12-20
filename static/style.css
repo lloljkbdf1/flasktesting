@@ -137,7 +137,7 @@ textarea {
     border-width: 3em;
     border-style: solid;
     width: 50em;
-    height: 50em;
+    height: auto;
     border-top-width:17em;
     top:10%;
     position:absolute;
