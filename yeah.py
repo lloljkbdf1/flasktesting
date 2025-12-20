@@ -25,8 +25,7 @@ def home():
         return render_template("index.html",title=title)
 @lol.route('/favicon.ico')
 def favicon():
-    with open("static/favicon.ico","rb") as f:
-        return f.read()
+    return redirect(url_for("static",filename="favicon.ico"))
 @lol.route("/blog")
 def blog():
     with open("blog/posts.json") as f:
@@ -37,6 +36,13 @@ def blog():
             return render_template("blog.html",posts=posts,login=True,title=title)
         else:
             return render_template("blog.html",posts=posts,title=title)
+@lol.route("/post")
+def post():
+    cookie=request.cookies.get("cookie")
+    if cookies.get(cookie)!=None:
+        return render_template("post.html",title=title,login=True)
+    else:
+        return redirect("/")
 @lol.route("/login")
 def login():
     cookie=request.cookies.get("cookie")
@@ -108,6 +114,21 @@ def login_post():
                 return render_template("login.html",failed=True,title=title)
         else:
             return render_template("login.html",title=title)
+@lol.route("/blog_post",methods=["POST"])
+def blog_post():
+    cookie=request.cookies.get("cookie")
+    if cookies.get(cookie)!=None:
+        if request.method == "POST":
+            title = request.form["title"]
+            post = request.form["post"]
+            with open("blog/posts.json","r") as f:
+                posts:dict=json.loads(f.read())
+                posts[len(posts)+1]={"title":title,"post":post,"author":cookies.get(cookie)}
+                with open("blog/posts.json","w") as f:
+                        f.write(json.dumps(posts,indent=2))
+            return redirect("/")
+    else:
+        return redirect("/")
 @lol.errorhandler(404)
 def error(e):
     return render_template("notfound.html",title=title)

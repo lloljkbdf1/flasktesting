@@ -26,9 +26,11 @@
       </li>
     </nav>
     {% if login %}
-     <form id="lol">
+     <form id="lol" action="{{ url_for('blog_post') }}" method="post">
     <div id="div" style="width: 30em;height: 30em;top: 20%;justify-content: center;display: grid;">
-        <h1>Welcome {{ username }}!</h1>
+         <input type="text" name="title" id="username" placeholder="Title" style="transform: scale(2.8);left: 33%;top: 10%;"required>
+        <textarea type="text" name="post" id="password" placeholder="" style="transform: scale(2);left: 33%;top: 40%;"rows="7" cols="20" wrap="soft"required></textarea>
+        <button type="submit" name="submit" id="submit" style="top: 90%;transform: scale(1.5);left: 34%;">Post</button>
     </div>
     </form>
     {% endif %}

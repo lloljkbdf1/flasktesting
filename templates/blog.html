@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ title }}: Blog</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
 </head>
@@ -11,14 +11,15 @@
 <body>
     <nav id="navbar">
         <li>
-            <label id="home" style="left: 17%; position: absolute;">Welcome to {{ title }}!</label>
+            <label id="home" style="left: 17%; position: absolute">Welcome to {{ title }}!</label>
             <a href="/" id="home">Home</a>
             <a href="/blog" id="home">Blog</a>
             {%if login %}
+            <a href="/post" id="home">Post</a>
             <a href="/signout" id="home">Sign Out</a>
             {% else %}
-            <a href="login"id="loginbutton" >Login</a>
-            <a href="signup"id="signupbutton" >Sign Up</a>
+            <a href="login" id="loginbutton">Login</a>
+            <a href="signup" id="signupbutton">Sign Up</a>
             {%endif%}
         </li>
     </nav>
@@ -26,16 +27,16 @@
         <div id="blog">
             {%for key,item in posts.items()%}
             <div id="post">
-                <h1>{{ item.title }}
-                    <hr color="#568d0d" size="6px">
+                <h1>
+                    {{ item.title }} by {{ item.author }}
+                    <hr color="#568d0d" size="6px" />
                     <h2>{{ item.post }}</h2>
                     <span>post id: {{ key }}</span>
                 </h1>
             </div>
-            <br>
+            <br />
             {%endfor%}
         </div>
     </form>
 </body>
-
 </html>
